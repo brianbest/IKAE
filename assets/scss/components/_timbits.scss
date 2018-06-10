@@ -1,0 +1,103 @@
+.timbits{
+  background: #fff;
+  .timbits-collection {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 80%;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: auto auto 320px;
+    padding: 40px 0 30px 0;
+
+    @include breakpoint('tablet'){
+      grid-template-columns: auto auto auto ;
+      width: 95%;
+    }
+    @include breakpoint('tablet-and-smaller'){
+      grid-template-columns: auto ;
+    }
+  }
+  .timbit {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint('tablet'){
+      margin-bottom: 20px;
+    }
+
+    @include breakpoint('tablet-and-smaller'){
+      width: 320px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+    @include breakpoint('mobile'){
+      width: 100%;
+
+    }
+    header{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 50px;
+      margin-bottom: 20px;
+
+      h3 {
+        margin: 0;
+      }
+    }
+    .info{
+      max-width: 350px;
+      margin: 0 auto;
+    }
+
+    .icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 17px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    h5 {
+      margin: 0;
+    }
+
+    p{
+      text-align: center;
+      margin: 0;
+      font-weight: 100;
+      opacity: 0.7;
+    }
+
+    @include breakpoint('tablet'){
+      h5{
+        font-size: 30px;
+      }
+      p {
+        font-size: 22px;
+      }
+    }
+    &.timbit-seo{
+      .icon {
+        width: 48px;
+        height: 48px;
+        background-image: url('/assets/images/icon_seo.png');
+      }
+    }
+    &.timbit-clients{
+      .icon {
+        width: 36px;
+        height: 36px;
+        background-image: url('/assets/images/icon_webdesign.png');
+      }
+    }
+    &.timbit-years{
+      .icon {
+        width: 40px;
+        height: 40px;
+        background-image: url('/assets/images/icon_ppc.png');
+      }
+    }
+  }
+}
